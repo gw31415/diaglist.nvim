@@ -39,7 +39,7 @@ end
 
 M.open_all_diagnostics = function()
   M.populate_qflist()
-  api.nvim_command('copen')
+  vim.cmd.copen()
 end
 
 M.diagnostics_hook = function()
