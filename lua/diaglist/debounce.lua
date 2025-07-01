@@ -4,6 +4,9 @@ local M = {}
 -- added vim.schedule_wrap
 function M.debounce_trailing(ms, fn)
   local timer = vim.uv.new_timer()
+  if not timer then
+    error('Failed to create timer')
+  end
   return function(...)
     local argv = { ... }
     timer:start(ms, 0, function()
