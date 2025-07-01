@@ -5,7 +5,7 @@ local M = {
 }
 
 function is_open()
-  return vim.fn.getloclist(0, {winid = 0}).winid ~= 0
+  return vim.fn.getloclist(0, { winid = 0 }).winid ~= 0
 end
 
 local function get_as_qfitems()
