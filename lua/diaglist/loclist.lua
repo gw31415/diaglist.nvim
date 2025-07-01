@@ -4,7 +4,7 @@ local M = {
   debug = false,
 }
 
-function is_open()
+local function is_open()
   return vim.fn.getloclist(0, { winid = 0 }).winid ~= 0
 end
 
